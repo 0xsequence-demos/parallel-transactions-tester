@@ -18,7 +18,7 @@ type TxResult = {
 const singleSignerNetworks = allNetworks.map(network => {
 	const env = import.meta.env.VITE_SEQUENCE_ENV;
 	console.log('env', env);
-	network.rpcUrl = `https://dev-nodes.sequence.app/${network.name}`;
+	network.rpcUrl = env === 'dev' ? `https://dev-nodes.sequence.app/${network.name}` : `https://nodes.sequence.app/${network.name}`;
 	network.relayer = {
 		url: env === 'dev' ? `https://dev-${network.name}-relayer.sequence.app` : `https://${network.name}-relayer.sequence.app`,
 		provider: {
