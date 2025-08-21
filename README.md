@@ -6,6 +6,8 @@ Setup an `.env` file with the following parameters to have them ingested automat
 
 ```
 VITE_SEQUENCE_PROJECT_ACCESS_KEY=
+# can be dev or prod
+VITE_SEQUENCE_ENV=dev
 VITE_TEST_PRIVATE_KEY=
 ```
 
